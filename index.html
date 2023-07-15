@@ -10,60 +10,81 @@
 <body>
     <!-- Header -->
     <div class="head">
-        <h2>Beginner Survey Form</h2> <br><br>
+        <span>Beginner Survey Form</span> <br><br>
     </div>
 
     <!-- Personal Details -->
-    <div class="fieldset-1" >
-        <fieldset>
-        <legend>Personal Details</legend>
+    <form id="myForm">
+        <div class="fieldset-1" >
+            
+            <fieldset>
+                <legend>Personal Details</legend>
+        
+                <!-- Input (Text)-->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required> <br>
+        
+                <label for="addr">Address:</label>
+                <input type="text" id="addr" name="addr" placeholder="Enter your Address" required> <br>
+        
+                <label for="mail">Email:</label>
+                <input type="text" id="mail" name="mail" placeholder="Enter your Email" required> <br>
+        
+                <!-- Input Number -->
+                <label for="Number">Number:</label>
+                <input type="number" id="Number" name="Number" inputmode="numeric" placeholder="Enter your Number" required> <br>
+        
 
-        <!-- Input (Text)-->
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name"> <br>
+                <!-- Gender selection Label -->
+                <span class="select-gender">Please select your gender:</span> <br>
+                <!--  Input (Radio-button) -->
+                <input type="radio" id="male" name="gender-selection" value="Male" required>
+                <label id="gender" for="male">Male</label><br>
+        
+                <input type="radio" id="female" name="gender-selection" value="Female" required>
+                <label id="gender" for="female">Female</label><br>
+        
+                <input type="radio" id="Non-binary" name="gender-selection" value="Non-binary" required>
+                <label id="gender" for="Non-binary">Non-binary</label><br>
+        
+                <input type="radio" id="anonymous" name="gender-selection" value="Prefer not to say" required>
+                <label id="gender" for="anonymous">Prefer not to say</label> <br>
+            </fieldset> 
+        </div> <br><br>    
+        
+    
+        <!-- Additional Information -->
+        <div class="fieldset-2">
+          <fieldset>
+                <legend>Additional Information</legend>
+        
+                <span class="b-info">Enter Your Background Information</span>  <br>
+                <textarea  name="B-info" id="B-info" cols="73" rows="10"
+                placeholder="Tell us about yourself, It will be nice to know more about you."></textarea>
+                <br>
+            </fieldset>
+        </div>
 
-        <label for="addr">Address:</label>
-        <input type="text" id="addr" name="addr" placeholder="Enter your Address"> <br>
+        <button id="btn" type="button" onclick="checkInput()">Submit</button>
+    </form>
 
-        <label for="mail">Email:</label>
-        <input type="text" id="mail" name="mail" placeholder="Enter your Email"> <br>
+    <!-- This shows user the inputs entered for confirmation  -->
+    <div id="details-check" > </div> 
 
-        <label for="Number">Number:</label>
-        <input type="text" id="Number" name="Number" placeholder="Enter your Number"> <br>
-
-            <!--  Input (Radio-button) -->
-        <label for="radio" id="gender">Please select your gender:</label> <br>
-
-        <input type="radio" id="male" name="gender-selection" value="Male">
-        <label for="male">Male</label><br>
-
-        <input type="radio" id="female" name="gender-selection" value="Female">
-        <label for="Female">Female</label><br>
-
-        <input type="radio" id="Non-binary" name="gender-selection" value="Non-binary">
-        <label for="Non-binary">Non-binary</label><br>
-
-        <input type="radio" id="anonymous" name="gender-selection" value="Prefer not to say">
-        <label for="anonymous">Prefer not to say</label> <br>
-    </fieldset> <br><br>
-
-    <!-- Additional Information -->
-    <div class="fieldset-2">
-      <fieldset>
-        <legend>Additional Information</legend>
-
-        <label for="B-info" id="info">Enter Your Background Information</label> <br>
-        <input type="text" id="B-info" name="Enter Your Background Information"placeholder="Enter Your Background Information"> <br>
-      </fieldset>
+    
+    <!-- Takes you back to the form -->
+    <div class="confirmation-btns">
+        <button id="back" type="button">Back</button>
+        <button id="confirm" type="button">Confirm</button>
     </div>
-    <button>Submit</button>
-
-
-
-    
+   
     
 
 
     
+    
+
+
+    <script src="Javascript/script.js"></script>
 </body>
 </html>
