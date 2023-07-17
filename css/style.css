@@ -29,12 +29,15 @@ fieldset {
 }
 
 input, textarea {
-    font-weight: 530;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
     'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    border: 1px solid  #ddd;
+    border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
     outline: none;
+}
+
+input[type="radio"] {
+    border: none;
 }
 
 input:focus, textarea:focus {
@@ -56,9 +59,10 @@ legend, .select-gender {
     margin-bottom: 25px;
 }
 
-.fieldset-1 input {
-    padding: 10px 20px;
+.fieldset-1 input[type="text"], input[type="number"] {
+    padding: 10px 5px;
     border-radius: 4px;
+    max-width: 20rem;
 }
 
 label, span.b-info {
